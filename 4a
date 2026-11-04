@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int a[] = {2, 4, 5, 10, 12, 15};
+    int c1 = 2, c2 = 10, i;
+
+    printf("K-Means Clustering:\n");
+
+    for(i = 0; i < 6; i++) {
+        if(abs(a[i]-c1) <= abs(a[i]-c2))
+            printf("%d -> Cluster 1\n", a[i]);
+        else
+            printf("%d -> Cluster 2\n", a[i]);
+    }
+
+    return 0;
+}
+#output
+K-Means Clustering:
+2 -> Cluster 1
+4 -> Cluster 1
+5 -> Cluster 1
+10 -> Cluster 2
+12 -> Cluster 2
+15 -> Cluster 2
